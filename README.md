@@ -4,7 +4,7 @@ Welcome to WSO2 Identity Server
 
 ---
 
-|  Branch | Build Status |                                      [![Join the chat at https://gitter.im/wso2/product-is](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/wso2/product-is?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+|  Branch | Build Status |                                      [![Join the chat at https://gitter.im/wso2/product-identity-server](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/wso2/product-identity-server?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 | :------------ |:-------------
 | master      | [![Build Status](https://wso2.org/jenkins/job/product-is/badge/icon)](https://wso2.org/jenkins/job/product-is) |
 
