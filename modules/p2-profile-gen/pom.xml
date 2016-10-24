@@ -395,12 +395,12 @@
                                     org.wso2.carbon.metrics:org.wso2.carbon.metrics.feature:${carbon.metrics.version}
                                 </featureArtifactDef>
 				
-				<!--Auth/Authz for Rest API-->
+				                <!--Auth/Authz for Rest API-->
 				                <featureArtifactDef>
-                    org.wso2.carbon.identity.auth.rest:org.wso2.carbon.identity.auth.server.feature:${org.wso2.carbon.identity.auth.version}
+                                    org.wso2.carbon.identity.auth.rest:org.wso2.carbon.identity.auth.server.feature:${carbon.identity.auth.version}
                                 </featureArtifactDef>
                                 <featureArtifactDef>
-                                    org.wso2.carbon.identity.auth.rest:org.wso2.carbon.identity.authz.server.feature:${org.wso2.carbon.identity.auth.version}
+                                    org.wso2.carbon.identity.auth.rest:org.wso2.carbon.identity.authz.server.feature:${carbon.identity.auth.version}
                                 </featureArtifactDef>
 
                             </featureArtifacts>
@@ -813,14 +813,14 @@
                                     <version>${carbon.metrics.version}</version>
                                 </feature>
 
-				<!-- Auth/Authz for Rest API  -->
-				<feature>
+				                <!-- Auth/Authz for Rest API  -->
+				                <feature>
                                     <id>org.wso2.carbon.identity.auth.server.feature.group</id>
-                                    <version>${org.wso2.carbon.identity.auth.version}</version>
+                                    <version>${carbon.identity.auth.version}</version>
                                 </feature>
                                 <feature>
                                     <id>org.wso2.carbon.identity.authz.server.feature.group</id>
-                                    <version>${org.wso2.carbon.identity.auth.version}</version>
+                                    <version>${carbon.identity.auth.version}</version>
                                 </feature>
 
 
@@ -1242,14 +1242,14 @@
                                     <version>${carbon.metrics.version}</version>
                                 </feature>
                            
-				<!-- Auth/Authz for Rest API  -->
+				                <!-- Auth/Authz for Rest API  -->
                                 <feature>
                                     <id>org.wso2.carbon.identity.auth.server.feature.group</id>
-                                    <version>${org.wso2.carbon.identity.auth.version}</version>
+                                    <version>${carbon.identity.auth.version}</version>
                                 </feature>
                                 <feature>
                                     <id>org.wso2.carbon.identity.authz.server.feature.group</id>
-                                    <version>${org.wso2.carbon.identity.auth.version}</version>
+                                    <version>${carbon.identity.auth.version}</version>
                                 </feature>
 	
  
@@ -1628,11 +1628,11 @@
 				<!-- Auth/Authz for Rest API  -->
                                 <feature>
                                     <id>org.wso2.carbon.identity.auth.server.feature.group</id>
-                                    <version>${org.wso2.carbon.identity.auth.version}</version>
+                                    <version>${carbon.identity.auth.version}</version>
                                 </feature>
                                 <feature>
                                     <id>org.wso2.carbon.identity.authz.server.feature.group</id>
-                                    <version>${org.wso2.carbon.identity.auth.version}</version>
+                                    <version>${carbon.identity.auth.version}</version>
                                 </feature>
 
                             </features>
