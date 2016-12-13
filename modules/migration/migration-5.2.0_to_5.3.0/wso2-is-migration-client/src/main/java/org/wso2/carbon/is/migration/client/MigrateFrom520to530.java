@@ -31,6 +31,7 @@ import org.wso2.carbon.is.migration.ClaimManager;
 import org.wso2.carbon.is.migration.ISMigrationException;
 import org.wso2.carbon.is.migration.MigrationDatabaseCreator;
 import org.wso2.carbon.is.migration.RegistryDataManager;
+import org.wso2.carbon.is.migration.ResidentIdpMetadataManager;
 import org.wso2.carbon.is.migration.SQLConstants;
 import org.wso2.carbon.is.migration.bean.Claim;
 import org.wso2.carbon.is.migration.bean.MappedAttribute;
@@ -177,6 +178,7 @@ public class MigrateFrom520to530 implements MigrationClient {
         String migrateUMDB = System.getProperty("migrateUMDB");
         String migrateEmailTemplateData = System.getProperty("migrateEmailTemplateData");
         String migratePermissionData = System.getProperty("migratePermissionData");
+        String migrateResidentIdpMetadata = System.getProperty("migrateResidentIdpMetaData");
 
         if (Boolean.parseBoolean(migrateIdentityDB)) {
             selectiveMigration = true;
@@ -206,14 +208,26 @@ public class MigrateFrom520to530 implements MigrationClient {
             log.info("Migrated the Permission data");
         }
 
+        if (Boolean.parseBoolean(migrateResidentIdpMetadata)) {
+            selectiveMigration = true;
+            migrateResidentIdpMetadata();
+            log.info("Migrated the Resident IDP metadata.");
+        }
+
         if(!selectiveMigration) {
             migrateIdentityDB();
             validateClaimMigration();
             migrateClaimData();
             migratePermissionData();
             migrateEmailTemplateData();
+            migrateResidentIdpMetadata();
             log.info("Migrated the identity and user database");
         }
+    }
+
+    public void migrateResidentIdpMetadata() throws Exception {
+
+        new ResidentIdpMetadataManager().migrateResidentIdpMetaData();
     }
 
     public void migrateEmailTemplateData() throws Exception {
