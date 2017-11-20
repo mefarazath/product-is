@@ -9,11 +9,18 @@
         <listener class-name="org.wso2.carbon.automation.engine.testlisteners.TestSuiteListener"/>
         <listener class-name="org.wso2.carbon.automation.engine.testlisteners.TestTransformerListener"/>
         <listener class-name="org.wso2.identity.integration.test.listeners.IdentityTestListener"/>
+        <listener class-name="org.wso2.identity.integration.test.listeners.LogListener"/>
     </listeners>
 
     <test name="is-tests-initialize" preserve-order="true" parallel="false" group-by-instances="true">
         <classes>
             <class name="org.wso2.identity.integration.test.IdentityServerTestSuitInitializerTestCase"/>
+        </classes>
+    </test>
+
+    <test name="token-expiry-tests" preserve-order="true" parallel="false" group-by-instances="true">
+        <classes>
+            <class name="org.wso2.identity.integration.test.oauth2.IDENTITY6777OAuth2TokenExpiryTestCase"/>
         </classes>
     </test>
 
@@ -105,10 +112,6 @@
             <class name="org.wso2.identity.integration.test.oauth2.OAuth2ServiceIntrospectionTestCase"/>
             <class name="org.wso2.identity.integration.test.oauth2.Oauth2PersistenceProcessorTestCase"/>
             <class name="org.wso2.identity.integration.test.oauth2.OAuth2ServiceSAML2BearerGrantTestCase"/>
-            <!--
-                https://wso2.org/jira/browse/IDENTITY-6829 Need to fix this and comment out the test case ASAP.
-            -->
-            <!--<class name="org.wso2.identity.integration.test.oauth2.IDENTITY6777OAuth2TokenExpiryTestCase"/>-->
 
             <!--OIDC Test Cases-->
             <class name="org.wso2.identity.integration.test.oidc.OIDCAuthCodeGrantSSOTestCase"/>
