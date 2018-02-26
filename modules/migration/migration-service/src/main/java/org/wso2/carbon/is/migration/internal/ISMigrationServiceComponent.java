@@ -19,17 +19,20 @@ package org.wso2.carbon.is.migration.internal;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.osgi.service.component.ComponentContext;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
+import org.osgi.service.component.annotations.ReferenceCardinality;
+import org.osgi.service.component.annotations.ReferencePolicy;
+import org.wso2.carbon.identity.application.mgt.ApplicationManagementService;
 import org.wso2.carbon.identity.core.migrate.MigrationClient;
 import org.wso2.carbon.is.migration.MigrationClientImpl;
 import org.wso2.carbon.user.core.service.RealmService;
 
 
-/**
- * @scr.component name="org.wso2.carbon.is.migration.client" immediate="true"
- * @scr.reference name="realm.service"
- * interface="org.wso2.carbon.user.core.service.RealmService" cardinality="1..1"
- * policy="dynamic" bind="setRealmService" unbind="unsetRealmService"
- */
+@Component(
+        name = "org.wso2.carbon.is.migration.client",
+        immediate = true
+)
 public class ISMigrationServiceComponent {
 
     private static final Log log = LogFactory.getLog(ISMigrationServiceComponent.class);
@@ -70,6 +73,13 @@ public class ISMigrationServiceComponent {
      *
      * @param realmService service to get tenant data.
      */
+    @Reference(
+            name = "realm.service",
+            service = RealmService.class,
+            cardinality = ReferenceCardinality.MANDATORY,
+            policy = ReferencePolicy.DYNAMIC,
+            unbind = "unsetRealmService"
+    )
     protected void setRealmService(RealmService realmService) {
         if(log.isDebugEnabled()) {
             log.debug("Setting RealmService to WSO2 IS Config component");
@@ -89,4 +99,36 @@ public class ISMigrationServiceComponent {
         ISMigrationServiceDataHolder.setRealmService(null);
     }
 
+    /**
+     * Sets ApplicationManagement Service.
+     *
+     * @param applicationManagementService An instance of ApplicationManagementService
+     */
+    @Reference(
+            name = "application.mgt.service",
+            service = ApplicationManagementService.class,
+            cardinality = ReferenceCardinality.MANDATORY,
+            policy = ReferencePolicy.DYNAMIC,
+            unbind = "unsetApplicationManagementService"
+    )
+    protected void setApplicationManagementService(ApplicationManagementService applicationManagementService) {
+
+        if (log.isDebugEnabled()) {
+            log.debug("Setting ApplicationManagement Service.");
+        }
+        ISMigrationServiceDataHolder.setApplicationManagementService(applicationManagementService);
+    }
+
+    /**
+     * Unsets ApplicationManagement Service.
+     *
+     * @param applicationManagementService An instance of ApplicationManagementService
+     */
+    protected void unsetApplicationManagementService(ApplicationManagementService applicationManagementService) {
+
+        if (log.isDebugEnabled()) {
+            log.debug("Un setting ApplicationManagement Service.");
+        }
+        ISMigrationServiceDataHolder.setApplicationManagementService(null);
+    }
 }

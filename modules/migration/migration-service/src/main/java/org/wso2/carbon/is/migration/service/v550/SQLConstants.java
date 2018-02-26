@@ -51,5 +51,6 @@ public class SQLConstants {
     public static final String ADD_ACCESS_TOKEN_HASH_COLUMN =
             "ALTER TABLE IDN_OAUTH2_ACCESS_TOKEN ADD ACCESS_TOKEN_HASH VARCHAR(512)";
 
-
+    public static final String RETRIEVE_ALL_CONSUMER_APPS = "SELECT CONSUMER_KEY FROM " +
+            "IDN_OAUTH_CONSUMER_APPS WHERE TENANT_ID=?";
 }

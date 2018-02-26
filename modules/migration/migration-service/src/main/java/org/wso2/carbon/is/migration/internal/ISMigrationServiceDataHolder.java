@@ -15,6 +15,7 @@
 */
 package org.wso2.carbon.is.migration.internal;
 
+import org.wso2.carbon.identity.application.mgt.ApplicationManagementService;
 import org.wso2.carbon.identity.claim.metadata.mgt.ClaimMetadataManagementService;
 import org.wso2.carbon.registry.core.service.RegistryService;
 import org.wso2.carbon.registry.core.service.TenantRegistryLoader;
@@ -27,6 +28,7 @@ public class ISMigrationServiceDataHolder {
     //Registry Service which is used to get registry data.
     private static RegistryService registryService;
     private static ClaimMetadataManagementService claimMetadataManagementService;
+    private static ApplicationManagementService applicationManagementService;
 
     //Realm Service which is used to get tenant data.
     private static RealmService realmService;
@@ -124,5 +126,13 @@ public class ISMigrationServiceDataHolder {
     public static void setClaimMetadataManagementService(
             ClaimMetadataManagementService claimMetadataManagementService) {
         ISMigrationServiceDataHolder.claimMetadataManagementService = claimMetadataManagementService;
+    }
+
+    public static ApplicationManagementService getApplicationManagementService() {
+        return applicationManagementService;
+    }
+
+    public static void setApplicationManagementService(ApplicationManagementService applicationManagementService) {
+        ISMigrationServiceDataHolder.applicationManagementService = applicationManagementService;
     }
 }

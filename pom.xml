@@ -1546,6 +1546,11 @@
                 <version>${ds-annotations.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.wso2.eclipse.osgi</groupId>
+                <artifactId>org.eclipse.osgi.services</artifactId>
+                <version>${equinox.osgi.services.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.wso2.carbon.consent.mgt</groupId>
                 <artifactId>org.wso2.carbon.consent.mgt.server.feature</artifactId>
                 <version>${carbon.consent.mgt.version}</version>
@@ -1804,6 +1809,7 @@
         <wsdl4j.version>1.6.2.wso2v2</wsdl4j.version>
         <commons.pool.wso2.version>1.5.6.wso2v1</commons.pool.wso2.version>
         <ds-annotations.version>1.2.10</ds-annotations.version>
+        <equinox.osgi.services.version>3.5.100.v20160504-1419</equinox.osgi.services.version>
         <snakeyaml.version>1.16.0.wso2v1</snakeyaml.version>
         <json.version>3.0.0.wso2v1</json.version>
         <carbon.consent.mgt.version>1.0.24</carbon.consent.mgt.version>

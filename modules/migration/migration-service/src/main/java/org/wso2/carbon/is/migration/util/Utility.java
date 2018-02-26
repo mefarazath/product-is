@@ -21,8 +21,10 @@ import org.wso2.carbon.identity.core.migrate.MigrationClientException;
 import org.wso2.carbon.identity.core.util.IdentityUtil;
 import org.wso2.carbon.is.migration.config.Config;
 import org.wso2.carbon.is.migration.internal.ISMigrationServiceDataHolder;
+import org.wso2.carbon.user.api.RealmConfiguration;
 import org.wso2.carbon.user.api.Tenant;
 import org.wso2.carbon.user.api.UserStoreException;
+import org.wso2.carbon.utils.multitenancy.MultitenantConstants;
 import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.introspector.BeanAccess;
 
@@ -152,5 +154,30 @@ public class Utility {
             log.error("Error occurred while reading tenant list.");
         }
         return tenantList;
+    }
+
+    public static List<Tenant> getAllTenantsIncludingSuperTenant() {
+        List<Tenant> tenantList = new ArrayList<>();
+        try {
+            // Add the super tenant domain
+            tenantList.add(getSuperTenant());
+            Tenant[] tenants = ISMigrationServiceDataHolder.getRealmService().getTenantManager().getAllTenants();
+            tenantList.addAll(new ArrayList<>(Arrays.asList(tenants)));
+        } catch (UserStoreException e) {
+            log.error("Error occurred while reading tenant list.");
+        }
+        return tenantList;
+    }
+
+    private static Tenant getSuperTenant() {
+        RealmConfiguration realmConfiguration =
+                ISMigrationServiceDataHolder.getRealmService().getBootstrapRealmConfiguration();
+        Tenant superTenant = new Tenant();
+        superTenant.setDomain(MultitenantConstants.SUPER_TENANT_DOMAIN_NAME);
+        superTenant.setId(realmConfiguration.getTenantId());
+        superTenant.setAdminName(realmConfiguration.getAdminUserName());
+        superTenant.setAdminPassword(realmConfiguration.getAdminPassword());
+        superTenant.setActive(true);
+        return superTenant;
     }
 }
