@@ -96,17 +96,46 @@
                                     <overWrite>true</overWrite>
                                     <outputDirectory>target</outputDirectory>
                                 </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.wso2.carbon.privacy</groupId>
-                                    <artifactId>org.wso2.carbon.privacy.forgetme.tool</artifactId>
-                                    <version>${forgetme.tool.version}</version>
-                                    <type>zip</type>
-                                    <overWrite>true</overWrite>
-                                    <outputDirectory>target/forget-me</outputDirectory>
-                                </artifactItem>
+                                <!--<artifactItem>-->
+                                    <!--<groupId>org.wso2.carbon.privacy</groupId>-->
+                                    <!--<artifactId>org.wso2.carbon.privacy.forgetme.tool</artifactId>-->
+                                    <!--<version>${forgetme.tool.version}</version>-->
+                                    <!--<type>zip</type>-->
+                                    <!--<overWrite>true</overWrite>-->
+                                    <!--<outputDirectory>target/forget-me</outputDirectory>-->
+                                <!--</artifactItem>-->
                             </artifactItems>
                         </configuration>
                     </execution>
+                    <!--<execution>-->
+                        <!--<id>add-sample</id>-->
+                        <!--<phase>package</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>copy</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<artifactItems>-->
+                                <!--<artifactItem>-->
+                                    <!--<groupId>org.wso2.is</groupId>-->
+                                    <!--<artifactId>is-helloworld-app</artifactId>-->
+                                    <!--<version>${project.version}</version>-->
+                                    <!--<type>war</type>-->
+                                    <!--<overWrite>true</overWrite>-->
+                                    <!--<outputDirectory>target/getting-started/webapp</outputDirectory>-->
+                                    <!--<destFileName>hello-world.war</destFileName>-->
+                                <!--</artifactItem>-->
+                                <!--<artifactItem>-->
+                                    <!--<groupId>org.eclipse.jetty</groupId>-->
+                                    <!--<artifactId>jetty-runner</artifactId>-->
+                                    <!--<version>${org.eclipse.jetty.runner.version}</version>-->
+                                    <!--<type>jar</type>-->
+                                    <!--<overWrite>true</overWrite>-->
+                                    <!--<outputDirectory>target/getting-started/lib</outputDirectory>-->
+                                    <!--<destFileName>jetty-runner.jar</destFileName>-->
+                                <!--</artifactItem>-->
+                            <!--</artifactItems>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
                 </executions>
             </plugin>
             <plugin>
@@ -226,6 +255,10 @@
 
                                 <replace file="../p2-profile-gen/target/wso2carbon-core-${carbon.kernel.version}/repository/conf/security/authenticators.xml" token="&lt;/Authenticator--&gt;" value="&lt;/Authenticator&gt;" />
 
+                                <property name="jdbc-scope-validator-only-token" value="&lt;ScopeValidators&gt;${line.separator} &lt;ScopeValidator class=&quot;org.wso2.carbon.identity.oauth2.validators.JDBCScopeValidator&quot; /&gt;${line.separator}&lt;/ScopeValidators&gt;"/>
+
+                                <replaceregexp file="../p2-profile-gen/target/wso2carbon-core-${carbon.kernel.version}/repository/conf/identity/identity.xml" match="(?s)&lt;ScopeValidators&gt;\s+.*&lt;/ScopeValidators&gt;" replace="${jdbc-scope-validator-only-token}" />
+
                                 <!-- turn off Registry Indexing -->
                                 <replace file="../p2-profile-gen/target/wso2carbon-core-${carbon.kernel.version}/repository/conf/registry.xml" token="&lt;startIndexing&gt;true&lt;/startIndexing&gt;" value="&lt;startIndexing&gt;false&lt;/startIndexing&gt;" />
 
@@ -329,43 +362,43 @@
                                     </fileset>
                                     <mapper type="glob" from="*.html" to="*.xml" />
                                 </move>
-                                <copy todir="src/site/xdoc" overwrite="false" includeemptydirs="false">
-                                    <fileset dir="${tempdir}/web">
-                                        <exclude name="**/yui/**" />
-                                        <exclude name="**/ajax/**" />
-                                        <exclude name="**/codemirror/**" />
-                                        <exclude name="**/WEB-INF/**" />
-                                        <exclude name="**/gadget/**" />
-                                        <exclude name="**/*.html" />
-                                        <exclude name="**/*.js" />
-                                        <exclude name="**/*.jsp" />
-                                        <exclude name="**/*.xsl" />
-                                        <exclude name="*.*" />
-                                        <exclude name="**/template.xml" />
-                                        <exclude name="**/codepress.xml" />
-                                    </fileset>
-                                </copy>
-                                <copy todir="src/site" overwrite="false" includeemptydirs="false">
-                                    <fileset dir="../documentation/src/site">
-                                    </fileset>
-                                </copy>
-                                <copy todir="src/site" overwrite="true" includeemptydirs="false">
-                                    <fileset dir="../documentation/src/site">
-                                        <exclude name="**/images/*.*" />
-                                        <exclude name="**/user-mgt-actdir.xml" />
-                                        <exclude name="**/user-mgt-jdbc.xml" />
-                                        <exclude name="**/user-mgt-ldap.xml" />
-                                        <exclude name="**/user-mgt-ldap-read-write.xml" />
-                                    </fileset>
-                                    <filterset>
-                                        <filter token="buildNumber" value="${buildNumber}" />
-                                    </filterset>
-                                </copy>
-                                <copy todir="target/site/" overwrite="false" includeemptydirs="false">
-                                    <fileset dir="src/site/xdoc/">
-                                        <include name="**/images/*.*" />
-                                    </fileset>
-                                </copy>
+                                <!--<copy todir="src/site/xdoc" overwrite="false" includeemptydirs="false">-->
+                                    <!--<fileset dir="${tempdir}/web">-->
+                                        <!--<exclude name="**/yui/**" />-->
+                                        <!--<exclude name="**/ajax/**" />-->
+                                        <!--<exclude name="**/codemirror/**" />-->
+                                        <!--<exclude name="**/WEB-INF/**" />-->
+                                        <!--<exclude name="**/gadget/**" />-->
+                                        <!--<exclude name="**/*.html" />-->
+                                        <!--<exclude name="**/*.js" />-->
+                                        <!--<exclude name="**/*.jsp" />-->
+                                        <!--<exclude name="**/*.xsl" />-->
+                                        <!--<exclude name="*.*" />-->
+                                        <!--<exclude name="**/template.xml" />-->
+                                        <!--<exclude name="**/codepress.xml" />-->
+                                    <!--</fileset>-->
+                                <!--</copy>-->
+                                <!--<copy todir="src/site" overwrite="false" includeemptydirs="false">-->
+                                    <!--<fileset dir="../documentation/src/site">-->
+                                    <!--</fileset>-->
+                                <!--</copy>-->
+                                <!--<copy todir="src/site" overwrite="true" includeemptydirs="false">-->
+                                    <!--<fileset dir="../documentation/src/site">-->
+                                        <!--<exclude name="**/images/*.*" />-->
+                                        <!--<exclude name="**/user-mgt-actdir.xml" />-->
+                                        <!--<exclude name="**/user-mgt-jdbc.xml" />-->
+                                        <!--<exclude name="**/user-mgt-ldap.xml" />-->
+                                        <!--<exclude name="**/user-mgt-ldap-read-write.xml" />-->
+                                    <!--</fileset>-->
+                                    <!--<filterset>-->
+                                        <!--<filter token="buildNumber" value="${buildNumber}" />-->
+                                    <!--</filterset>-->
+                                <!--</copy>-->
+                                <!--<copy todir="target/site/" overwrite="false" includeemptydirs="false">-->
+                                    <!--<fileset dir="src/site/xdoc/">-->
+                                        <!--<include name="**/images/*.*" />-->
+                                    <!--</fileset>-->
+                                <!--</copy>-->
                                 <delete dir="${tempdir}" />
                             </tasks>
                         </configuration>
