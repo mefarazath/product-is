@@ -128,16 +128,16 @@
 
                                 <property name="xss-is-token" value="" />
 
-                                <property name="sso-idp-config-default" value="&lt;!--ServiceProvider&gt;&lt;/ServiceProvider--&gt;" />
+                                <!--<property name="sso-idp-config-default" value="&lt;!&#45;&#45;ServiceProvider&gt;&lt;/ServiceProvider&#45;&#45;&gt;" />-->
 
-                                <property name="sso-idp-config-replace" value="&lt;ServiceProvider&gt;${line.separator} &lt;Issuer&gt;wso2.my.dashboard&lt;/Issuer&gt;${line.separator} &lt;AssertionConsumerServiceURLs&gt;${line.separator} &lt;AssertionConsumerServiceURL&gt;${carbon.protocol}://${carbon.host}:${carbon.management.port}/dashboard/acs&lt;/AssertionConsumerServiceURL&gt;${line.separator} &lt;/AssertionConsumerServiceURLs&gt;${line.separator} &lt;DefaultAssertionConsumerServiceURL&gt;${carbon.protocol}://${carbon.host}:${carbon.management.port}/dashboard/acs&lt;/DefaultAssertionConsumerServiceURL&gt;${line.separator} &lt;SignResponse&gt;true&lt;/SignResponse&gt;${line.separator} &lt;EnableAudienceRestriction&gt;true&lt;/EnableAudienceRestriction&gt;${line.separator} &lt;AudiencesList&gt;${line.separator} &lt;Audience&gt;carbonServer&lt;/Audience&gt;${line.separator} &lt;/AudiencesList&gt;${line.separator} &lt;/ServiceProvider&gt;" />
+                                <!--<property name="sso-idp-config-replace" value="&lt;ServiceProvider&gt;${line.separator} &lt;Issuer&gt;wso2.my.dashboard&lt;/Issuer&gt;${line.separator} &lt;AssertionConsumerServiceURLs&gt;${line.separator} &lt;AssertionConsumerServiceURL&gt;${carbon.protocol}://${carbon.host}:${carbon.management.port}/dashboard/acs&lt;/AssertionConsumerServiceURL&gt;${line.separator} &lt;/AssertionConsumerServiceURLs&gt;${line.separator} &lt;DefaultAssertionConsumerServiceURL&gt;${carbon.protocol}://${carbon.host}:${carbon.management.port}/dashboard/acs&lt;/DefaultAssertionConsumerServiceURL&gt;${line.separator} &lt;SignResponse&gt;true&lt;/SignResponse&gt;${line.separator} &lt;EnableAudienceRestriction&gt;true&lt;/EnableAudienceRestriction&gt;${line.separator} &lt;AudiencesList&gt;${line.separator} &lt;Audience&gt;carbonServer&lt;/Audience&gt;${line.separator} &lt;/AudiencesList&gt;${line.separator} &lt;/ServiceProvider&gt;" />-->
 
                                 <property name="security-header-filter-is-token" value="&lt;filter&gt;${line.separator} &lt;filter-name&gt;HttpHeaderSecurityFilter&lt;/filter-name&gt;${line.separator} &lt;filter-class&gt;org.apache.catalina.filters.HttpHeaderSecurityFilter&lt;/filter-class&gt;${line.separator} &lt;init-param&gt;${line.separator} &lt;param-name&gt;hstsEnabled&lt;/param-name&gt;${line.separator} &lt;param-value&gt;false&lt;/param-value&gt;${line.separator} &lt;/init-param&gt;${line.separator} &lt;init-param&gt;${line.separator} &lt;param-name&gt;antiClickJackingEnabled&lt;/param-name&gt;${line.separator} &lt;param-value&gt;false&lt;/param-value&gt;${line.separator} &lt;/init-param&gt;${line.separator} &lt;/filter&gt;${line.separator}${line.separator} &lt;filter&gt;${line.separator} &lt;filter-name&gt;HttpHeaderSecurityFilter_EnableAntiClickJacking&lt;/filter-name&gt;${line.separator} &lt;filter-class&gt;org.apache.catalina.filters.HttpHeaderSecurityFilter&lt;/filter-class&gt;${line.separator} &lt;init-param&gt;${line.separator} &lt;param-name&gt;hstsEnabled&lt;/param-name&gt;${line.separator} &lt;param-value&gt;false&lt;/param-value&gt;${line.separator} &lt;/init-param&gt;${line.separator} &lt;init-param&gt;${line.separator} &lt;param-name&gt;blockContentTypeSniffingEnabled&lt;/param-name&gt;${line.separator} &lt;param-value&gt;false&lt;/param-value&gt;${line.separator}&lt;/init-param&gt;${line.separator}&lt;init-param&gt;${line.separator}&lt;param-name&gt;xssProtectionEnabled&lt;/param-name&gt;${line.separator}&lt;param-value&gt;false&lt;/param-value&gt;${line.separator}&lt;/init-param&gt;${line.separator}&lt;/filter&gt;" />
 
                                 <property name="security-header-filter-mapping-is-token" value="&lt;filter-mapping&gt;${line.separator} &lt;filter-name&gt;HttpHeaderSecurityFilter&lt;/filter-name&gt;${line.separator} &lt;url-pattern&gt;*&lt;/url-pattern&gt;${line.separator} &lt;/filter-mapping&gt;${line.separator}${line.separator} &lt;filter-mapping&gt;${line.separator} &lt;filter-name&gt;CharsetFilter&lt;/filter-name&gt;${line.separator} &lt;url-pattern&gt;/*&lt;/url-pattern&gt;${line.separator} &lt;/filter-mapping&gt;${line.separator}${line.separator} &lt;filter-mapping&gt;${line.separator} &lt;filter-name&gt;HttpHeaderSecurityFilter_EnableAntiClickJacking&lt;/filter-name&gt;${line.separator} &lt;url-pattern&gt;/carbon/*&lt;/url-pattern&gt;${line.separator} &lt;url-pattern&gt;/services/*&lt;/url-pattern&gt;${line.separator} &lt;url-pattern&gt;/samlsso/*&lt;/url-pattern&gt;${line.separator} &lt;url-pattern&gt;/openid/*&lt;/url-pattern&gt;${line.separator} &lt;url-pattern&gt;/openidserver/*&lt;/url-pattern&gt;${line.separator} &lt;url-pattern&gt;/passivests/*&lt;/url-pattern&gt;${line.separator} &lt;url-pattern&gt;/acs/*&lt;/url-pattern&gt;${line.separator} &lt;url-pattern&gt;/iwa/*&lt;/url-pattern&gt;${line.separator} &lt;url-pattern&gt;/identity/*&lt;/url-pattern&gt;${line.separator} &lt;url-pattern&gt;/thriftAuthenticator/*&lt;/url-pattern&gt;${line.separator} &lt;/filter-mapping&gt;${line.separator}${line.separator} &lt;filter-mapping&gt;${line.separator} &lt;filter-name&gt;CSRFGuard&lt;/filter-name&gt;${line.separator} &lt;url-pattern&gt;/*&lt;/url-pattern&gt;${line.separator} &lt;/filter-mapping&gt;${line.separator}" />
                                 <property name="hideMenu" value="&lt;/Security&gt;${line.separator}&lt;HideMenuItemIds&gt;${line.separator}&lt;HideMenuItemId&gt;claim_mgt_menu&lt;/HideMenuItemId&gt;${line.separator}&lt;HideMenuItemId&gt;identity_mgt_emailtemplate_menu&lt;/HideMenuItemId&gt;${line.separator}&lt;HideMenuItemId&gt;identity_security_questions_menu&lt;/HideMenuItemId&gt;${line.separator}&lt;/HideMenuItemIds&gt;" />
 
-                                <property name="captcha-filter-is-token" value="&lt;filter&gt;${line.separator} &lt;filter-name&gt;CaptchaFilter&lt;/filter-name&gt;${line.separator} &lt;filter-class&gt;org.wso2.carbon.identity.captcha.filter.CaptchaFilter&lt;/filter-class&gt;${line.separator} &lt;/filter&gt;${line.separator}${line.separator} &lt;filter-mapping&gt;${line.separator} &lt;filter-name&gt;CaptchaFilter&lt;/filter-name&gt;${line.separator} &lt;url-pattern&gt;/samlsso&lt;/url-pattern&gt;${line.separator} &lt;url-pattern&gt;/oauth2&lt;/url-pattern&gt;${line.separator} &lt;url-pattern&gt;/commonauth&lt;/url-pattern&gt;${line.separator} &lt;dispatcher&gt;FORWARD&lt;/dispatcher&gt;${line.separator} &lt;dispatcher&gt;REQUEST&lt;/dispatcher&gt;${line.separator} &lt;/filter-mapping&gt;${line.separator}${line.separator} &lt;session-config&gt;" />
+                                <!--<property name="captcha-filter-is-token" value="&lt;filter&gt;${line.separator} &lt;filter-name&gt;CaptchaFilter&lt;/filter-name&gt;${line.separator} &lt;filter-class&gt;org.wso2.carbon.identity.captcha.filter.CaptchaFilter&lt;/filter-class&gt;${line.separator} &lt;/filter&gt;${line.separator}${line.separator} &lt;filter-mapping&gt;${line.separator} &lt;filter-name&gt;CaptchaFilter&lt;/filter-name&gt;${line.separator} &lt;url-pattern&gt;/samlsso&lt;/url-pattern&gt;${line.separator} &lt;url-pattern&gt;/oauth2&lt;/url-pattern&gt;${line.separator} &lt;url-pattern&gt;/commonauth&lt;/url-pattern&gt;${line.separator} &lt;dispatcher&gt;FORWARD&lt;/dispatcher&gt;${line.separator} &lt;dispatcher&gt;REQUEST&lt;/dispatcher&gt;${line.separator} &lt;/filter-mapping&gt;${line.separator}${line.separator} &lt;session-config&gt;" />-->
 
                                 <mkdir dir="${tempdir}" />
                                 <unzip dest="${tempdir}">
@@ -190,7 +190,7 @@
 
                                 <replaceregexp file="target/wso2carbon-core-${carbon.kernel.version}/repository/conf/tomcat/carbon/WEB-INF/web.xml" match="(?s)&lt;filter-mapping&gt;\s+&lt;filter-name&gt;HttpHeaderSecurityFilter&lt;/filter-name&gt;.*&lt;/filter-mapping&gt;" replace="${security-header-filter-mapping-is-token}" />
 
-                                <replace file="target/wso2carbon-core-${carbon.kernel.version}/repository/conf/tomcat/carbon/WEB-INF/web.xml" token="&lt;session-config&gt;" value="${captcha-filter-is-token}" />
+                                <!--<replace file="target/wso2carbon-core-${carbon.kernel.version}/repository/conf/tomcat/carbon/WEB-INF/web.xml" token="&lt;session-config&gt;" value="${captcha-filter-is-token}" />-->
 
                                 <!-- Update Owasp.CsrfGuard.properties file location to fix IBM JDK and DevStudio issue-->
                                 <replace file="target/wso2carbon-core-${carbon.kernel.version}/repository/conf/tomcat/carbon/WEB-INF/web.xml" token="/repository/conf/security/Owasp.CsrfGuard.Carbon.properties" value="repository/conf/security/Owasp.CsrfGuard.Carbon.properties" />
@@ -202,13 +202,13 @@
                                 <replace file="target/wso2carbon-core-${carbon.kernel.version}/repository/conf/security/Owasp.CsrfGuard.Carbon.properties" token="org.owasp.csrfguard.unprotected.Services=%servletContext%/services/*" value="org.owasp.csrfguard.unprotected.Services=%servletContext%/services/*${line.separator}org.owasp.csrfguard.unprotected.commonauth=%servletContext%/commonauth/*${line.separator}org.owasp.csrfguard.unprotected.samlsso=%servletContext%/samlsso/*${line.separator}org.owasp.csrfguard.unprotected.authenticationendpoint=%servletContext%/authenticationendpoint/*${line.separator}org.owasp.csrfguard.unprotected.wso2=%servletContext%/wso2/*${line.separator}org.owasp.csrfguard.unprotected.oauth2=%servletContext%/oauth2/*${line.separator}org.owasp.csrfguard.unprotected.oidc=%servletContext%/oidc/*${line.separator}org.owasp.csrfguard.unprotected.openid=%servletContext%/openid/*${line.separator}org.owasp.csrfguard.unprotected.openidserver=%servletContext%/openidserver/*${line.separator}org.owasp.csrfguard.unprotected.passivests=%servletContext%/passivests/*${line.separator}org.owasp.csrfguard.unprotected.acs=%servletContext%/acs/*${line.separator}org.owasp.csrfguard.unprotected.iwa=%servletContext%/iwa/*${line.separator}org.owasp.csrfguard.unprotected.oauthiwa=%servletContext%/commonauth/iwa/*${line.separator}org.owasp.csrfguard.unprotected.thrift=%servletContext%/thriftAuthenticator/*${line.separator}org.owasp.csrfguard.unprotected.mex=%servletContext%/mexut/*${line.separator}org.owasp.csrfguard.unprotected.identity=%servletContext%/identity/*" />
 
                                 <!-- Comment all active UserStoreManagers -->
-                                <replace file="target/wso2carbon-core-${carbon.kernel.version}/repository/conf/user-mgt.xml" token="&lt;UserStoreManager" value="&lt;!--UserStoreManager" />
+                                <!--<replace file="target/wso2carbon-core-${carbon.kernel.version}/repository/conf/user-mgt.xml" token="&lt;UserStoreManager" value="&lt;!&#45;&#45;UserStoreManager" />-->
 
-                                <replace file="target/wso2carbon-core-${carbon.kernel.version}/repository/conf/user-mgt.xml" token="&lt;/UserStoreManager&gt;" value="&lt;/UserStoreManager--&gt;" />
+                                <!--<replace file="target/wso2carbon-core-${carbon.kernel.version}/repository/conf/user-mgt.xml" token="&lt;/UserStoreManager&gt;" value="&lt;/UserStoreManager&#45;&#45;&gt;" />-->
 
-                                <replace file="target/wso2carbon-core-${carbon.kernel.version}/repository/conf/user-mgt.xml" token="&lt;!--ISUserStoreManager" value="&lt;UserStoreManager" />
+                                <!--<replace file="target/wso2carbon-core-${carbon.kernel.version}/repository/conf/user-mgt.xml" token="&lt;!&#45;&#45;ISUserStoreManager" value="&lt;UserStoreManager" />-->
 
-                                <replace file="target/wso2carbon-core-${carbon.kernel.version}/repository/conf/user-mgt.xml" token="&lt;/ISUserStoreManager--&gt;" value="&lt;/UserStoreManager&gt;" />
+                                <!--<replace file="target/wso2carbon-core-${carbon.kernel.version}/repository/conf/user-mgt.xml" token="&lt;/ISUserStoreManager&#45;&#45;&gt;" value="&lt;/UserStoreManager&gt;" />-->
 
                                <replace file="target/wso2carbon-core-${carbon.kernel.version}/repository/conf/user-mgt.xml" token="&lt;Property name=&quot;GetAllRolesOfUserEnabled&quot;&gt;true&lt;/Property&gt;" value="&lt;!--Property name=&quot;GetAllRolesOfUserEnabled&quot;&gt;true&lt;/Property--&gt;" />
 
@@ -220,7 +220,7 @@
 
                                 <replace file="target/wso2carbon-core-${carbon.kernel.version}/repository/conf/user-mgt.xml" token="&lt;Property name=&quot;isCascadeDeleteEnabled&quot;&gt;true&lt;/Property&gt;" value="&lt;Property name=&quot;isCascadeDeleteEnabled&quot;&gt;true&lt;/Property&gt;${line.separator} &lt;Property name=&quot;initializeNewClaimManager&quot;&gt;true&lt;/Property&gt;" />
 
-                                <replace file="../p2-profile-gen/target/wso2carbon-core-${carbon.kernel.version}/repository/conf/identity/sso-idp-config.xml" token="${sso-idp-config-default}" value="${sso-idp-config-replace}" />
+                                <!--<replace file="../p2-profile-gen/target/wso2carbon-core-${carbon.kernel.version}/repository/conf/identity/sso-idp-config.xml" token="${sso-idp-config-default}" value="${sso-idp-config-replace}" />-->
 
                                 <replace file="../p2-profile-gen/target/wso2carbon-core-${carbon.kernel.version}/repository/conf/security/authenticators.xml" token="&lt;!--Authenticator name=&quot;MutualSSLAuthenticator&quot; disabled=&quot;false&quot;&gt;" value="&lt;Authenticator name=&quot;MutualSSLAuthenticator&quot;&gt;" />
 
@@ -230,8 +230,8 @@
                                 <replace file="../p2-profile-gen/target/wso2carbon-core-${carbon.kernel.version}/repository/conf/registry.xml" token="&lt;startIndexing&gt;true&lt;/startIndexing&gt;" value="&lt;startIndexing&gt;false&lt;/startIndexing&gt;" />
 
                                 <!-- update ciphertool properties to enable securevault on thrift server keystore password-->
-                                <replace file="../p2-profile-gen/target/wso2carbon-core-${carbon.kernel.version}/repository/conf/security/cipher-text.properties" token="Server.Service.Connector.keystorePass=[wso2carbon]" value="Server.Service.Connector.keystorePass=[wso2carbon]${line.separator}ThirftBasedEntitlementConfig.KeyStore.Password=[wso2carbon]" />
-                                <replace file="../p2-profile-gen/target/wso2carbon-core-${carbon.kernel.version}/repository/conf/security/cipher-tool.properties" token="Server.Service.Connector.keystorePass=repository/conf/tomcat/catalina-server.xml//Server/Service/Connector[@keystorePass],true" value="Server.Service.Connector.keystorePass=repository/conf/tomcat/catalina-server.xml//Server/Service/Connector[@keystorePass],true${line.separator}ThirftBasedEntitlementConfig.KeyStore.Password=repository/conf/identity/identity.xml//Server/EntitlementSettings/ThirftBasedEntitlementConfig/KeyStore/Password,true" />
+                                <!--<replace file="../p2-profile-gen/target/wso2carbon-core-${carbon.kernel.version}/repository/conf/security/cipher-text.properties" token="Server.Service.Connector.keystorePass=[wso2carbon]" value="Server.Service.Connector.keystorePass=[wso2carbon]${line.separator}ThirftBasedEntitlementConfig.KeyStore.Password=[wso2carbon]" />-->
+                                <!--<replace file="../p2-profile-gen/target/wso2carbon-core-${carbon.kernel.version}/repository/conf/security/cipher-tool.properties" token="Server.Service.Connector.keystorePass=repository/conf/tomcat/catalina-server.xml//Server/Service/Connector[@keystorePass],true" value="Server.Service.Connector.keystorePass=repository/conf/tomcat/catalina-server.xml//Server/Service/Connector[@keystorePass],true${line.separator}ThirftBasedEntitlementConfig.KeyStore.Password=repository/conf/identity/identity.xml//Server/EntitlementSettings/ThirftBasedEntitlementConfig/KeyStore/Password,true" />-->
 
                                 <!-- Update the README.txt inside the bin folder about forgetme execution scripts. -->
                                 <replace file="target/wso2carbon-core-${carbon.kernel.version}/bin/README.txt" token="10. carbondump.sh &amp; carbondump.bat - Carbondump is a tool for collecting all the necessary data from a running Carbon instance at the time of an error. The carbondump generates a zip archive with the collected data, which can be used to analyze your system and determine the problem which caused the error." value="10. carbondump.sh &amp; carbondump.bat - Carbondump is a tool for collecting all the necessary data from a running Carbon instance at the time of an error. The carbondump generates a zip archive with the collected data, which can be used to analyze your system and determine the problem which caused the error.${line.separator}${line.separator}11. forgetme.sh &amp; forgetme.bat - Forgetme is a tool to anonymize deleted user information from metadata tables and log files. This tool will replace the given user name with a given or random pseudonym.${line.separator}" />
@@ -277,10 +277,10 @@
                                     </fileset>
                                 </copy>
 
-                                <copy todir="target/wso2carbon-core-${carbon.kernel.version}/dbscripts/identity/uma" overwrite="false">
-                                    <fileset dir="${basedir}/../p2-profile-gen/target/wso2carbon-core-${carbon.kernel.version}/dbscripts/identity/uma/">
-                                    </fileset>
-                                </copy>
+                                <!--<copy todir="target/wso2carbon-core-${carbon.kernel.version}/dbscripts/identity/uma" overwrite="false">-->
+                                    <!--<fileset dir="${basedir}/../p2-profile-gen/target/wso2carbon-core-${carbon.kernel.version}/dbscripts/identity/uma/">-->
+                                    <!--</fileset>-->
+                                <!--</copy>-->
 
                                 <path id="h2.classpath">
                                     <path refid="maven.compile.classpath" />
@@ -301,14 +301,14 @@
                                     <fileset file="target/wso2carbon-core-${carbon.kernel.version}/dbscripts/consent/h2.sql" />
                                 </sql>
                                 <echo message="##################### END ########################" />
-                                <echo message="########### Create UMA Database ##############" />
-                                <sql driver="org.h2.Driver" url="jdbc:h2:${basedir}/target/wso2carbon-core-${carbon.kernel.version}/repository/database/WSO2CARBON_DB" userid="wso2carbon" password="wso2carbon" autocommit="true" onerror="continue">
-                                    <classpath>
-                                        <path refid="h2.classpath" />
-                                    </classpath>
-                                    <fileset file="target/wso2carbon-core-${carbon.kernel.version}/dbscripts/identity/uma/h2.sql" />
-                                </sql>
-                                <echo message="##################### END ########################" />
+                                <!--<echo message="########### Create UMA Database ##############" />-->
+                                <!--<sql driver="org.h2.Driver" url="jdbc:h2:${basedir}/target/wso2carbon-core-${carbon.kernel.version}/repository/database/WSO2CARBON_DB" userid="wso2carbon" password="wso2carbon" autocommit="true" onerror="continue">-->
+                                    <!--<classpath>-->
+                                        <!--<path refid="h2.classpath" />-->
+                                    <!--</classpath>-->
+                                    <!--<fileset file="target/wso2carbon-core-${carbon.kernel.version}/dbscripts/identity/uma/h2.sql" />-->
+                                <!--</sql>-->
+                                <!--<echo message="##################### END ########################" />-->
 
                                 <delete file="target/wso2is-${project.version}.zip" />
                                 <delete dir="${tempdir}" />
