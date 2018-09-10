@@ -96,32 +96,32 @@
                             <publishArtifacts>true</publishArtifacts>
                             <publishArtifactRepository>true</publishArtifactRepository>
                             <featureArtifacts>
-                                <!--&lt;!&ndash;jaggery features&ndash;&gt;-->
-                                <!--<featureArtifactDef>org.jaggeryjs:org.jaggeryjs.server.feature:${jaggeryjs.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>org.jaggeryjs.modules:ws.feature:${ws.module.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>org.jaggeryjs.modules:oauth.feature:${oauth.module.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>org.jaggeryjs.modules:email.feature:${email.module.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>org.jaggeryjs.modules:uuid.feature:${uuid.module.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>org.jaggeryjs.modules:process.feature:${process.module.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>org.jaggeryjs.modules:caramel.feature:${caramel.module.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>org.jaggeryjs.modules:carbon.feature:${carbon.module.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.jaggeryjs.modules:handlebars.feature:${handlebars.module.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>org.jaggeryjs.modules:markdown.feature:${markdown.module.verion}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>org.jaggeryjs.modules:gadget.feature:${gadget.module.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>org.jaggeryjs.modules:i18n.feature:${i18n.module.version}-->
-                                <!--</featureArtifactDef>-->
+                                <!--jaggery features-->
+                                <featureArtifactDef>org.jaggeryjs:org.jaggeryjs.server.feature:${jaggeryjs.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>org.jaggeryjs.modules:ws.feature:${ws.module.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>org.jaggeryjs.modules:oauth.feature:${oauth.module.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>org.jaggeryjs.modules:email.feature:${email.module.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>org.jaggeryjs.modules:uuid.feature:${uuid.module.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>org.jaggeryjs.modules:process.feature:${process.module.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>org.jaggeryjs.modules:caramel.feature:${caramel.module.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>org.jaggeryjs.modules:carbon.feature:${carbon.module.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.jaggeryjs.modules:handlebars.feature:${handlebars.module.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>org.jaggeryjs.modules:markdown.feature:${markdown.module.verion}
+                                </featureArtifactDef>
+                                <featureArtifactDef>org.jaggeryjs.modules:gadget.feature:${gadget.module.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>org.jaggeryjs.modules:i18n.feature:${i18n.module.version}
+                                </featureArtifactDef>
 
                                 <!--Carbon features-->
                                 <featureArtifactDef>
@@ -133,27 +133,27 @@
                                 <featureArtifactDef>
                                     org.wso2.carbon.commons:org.wso2.carbon.logging.mgt.feature:${carbon.commons.version}
                                 </featureArtifactDef>
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.commons:org.wso2.carbon.system.statistics.feature:${carbon.commons.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.commons:org.wso2.carbon.soaptracer.feature:${carbon.commons.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.analytics-common:org.wso2.carbon.databridge.datapublisher.feature:${carbon.analytics-common.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.analytics-common:org.wso2.carbon.event.publisher.aggregate.feature:${carbon.analytics-common.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.identity.framework:org.wso2.carbon.security.mgt.feature:${carbon.identity.framework.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.identity.inbound.auth.sts:org.wso2.carbon.sts.feature:${identity.inbound.auth.sts.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.identity.inbound.auth.sts:org.wso2.carbon.mex.server.feature:${identity.inbound.auth.sts.version}-->
-                                <!--</featureArtifactDef>-->
+                                <featureArtifactDef>
+                                    org.wso2.carbon.commons:org.wso2.carbon.system.statistics.feature:${carbon.commons.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.commons:org.wso2.carbon.soaptracer.feature:${carbon.commons.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.analytics-common:org.wso2.carbon.databridge.datapublisher.feature:${carbon.analytics-common.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.analytics-common:org.wso2.carbon.event.publisher.aggregate.feature:${carbon.analytics-common.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.identity.framework:org.wso2.carbon.security.mgt.feature:${carbon.identity.framework.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.identity.inbound.auth.sts:org.wso2.carbon.sts.feature:${identity.inbound.auth.sts.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.identity.inbound.auth.sts:org.wso2.carbon.mex.server.feature:${identity.inbound.auth.sts.version}
+                                </featureArtifactDef>
 
                                 <!-- registry related features -->
                                 <featureArtifactDef>
@@ -231,21 +231,21 @@
                                 <featureArtifactDef>
                                     org.wso2.carbon.identity.framework:org.wso2.carbon.identity.application.authentication.framework.server.feature:${carbon.identity.framework.version}
                                 </featureArtifactDef>
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.identity.application.authz.xacml:org.wso2.carbon.identity.application.authz.xacml.server.feature:${identity.app.authz.xacml.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.extension.identity.oauth.addons:org.wso2.carbon.identity.oauth2.validators.xacml.server.feature:${identity.oauth2.validators.xacml.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.identity.datapublisher.authentication:org.wso2.carbon.identity.data.publisher.application.authentication.server.feature:${identity.data.publisher.authentication.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.identity.data.publisher.oauth:org.wso2.carbon.identity.data.publisher.oauth.server.feature:${identity.data.publisher.oauth.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.identity.data.publisher.audit:org.wso2.carbon.identity.data.publisher.audit.user.operation.server.feature:${identity.data.publisher.audit.version}-->
-                                <!--</featureArtifactDef>-->
+                                <featureArtifactDef>
+                                    org.wso2.carbon.identity.application.authz.xacml:org.wso2.carbon.identity.application.authz.xacml.server.feature:${identity.app.authz.xacml.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.extension.identity.oauth.addons:org.wso2.carbon.identity.oauth2.validators.xacml.server.feature:${identity.oauth2.validators.xacml.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.identity.datapublisher.authentication:org.wso2.carbon.identity.data.publisher.application.authentication.server.feature:${identity.data.publisher.authentication.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.identity.data.publisher.oauth:org.wso2.carbon.identity.data.publisher.oauth.server.feature:${identity.data.publisher.oauth.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.identity.data.publisher.audit:org.wso2.carbon.identity.data.publisher.audit.user.operation.server.feature:${identity.data.publisher.audit.version}
+                                </featureArtifactDef>
 
                                 <!-- Authenticators -->
                                 <featureArtifactDef>
@@ -283,15 +283,15 @@
                                     org.wso2.carbon.identity.carbon.auth.iwa:org.wso2.carbon.identity.authenticator.iwa.feature:${identity.carbon.auth.iwa.version}
                                 </featureArtifactDef>
 
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.identity.inbound.auth.sts:org.wso2.carbon.identity.sts.passive.feature:${identity.inbound.auth.sts.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.identity.inbound.auth.sts:org.wso2.carbon.identity.sts.mgt.feature:${identity.inbound.auth.sts.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.identity.userstore.ldap:org.wso2.carbon.ldap.server.feature:${identity.userstore.ldap.version}-->
-                                <!--</featureArtifactDef>-->
+                                <featureArtifactDef>
+                                    org.wso2.carbon.identity.inbound.auth.sts:org.wso2.carbon.identity.sts.passive.feature:${identity.inbound.auth.sts.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.identity.inbound.auth.sts:org.wso2.carbon.identity.sts.mgt.feature:${identity.inbound.auth.sts.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.identity.userstore.ldap:org.wso2.carbon.ldap.server.feature:${identity.userstore.ldap.version}
+                                </featureArtifactDef>
                                 <featureArtifactDef>
                                     org.wso2.carbon.identity.userstore.remote:org.wso2.carbon.identity.user.store.remote.feature:${identity.userstore.remote.version}
                                 </featureArtifactDef>
@@ -301,116 +301,116 @@
                                 <featureArtifactDef>
                                     org.wso2.carbon.identity.inbound.provisioning.scim2:org.wso2.carbon.identity.scim2.server.feature:${identity.inbound.provisioning.scim2.version}
                                 </featureArtifactDef>
-                                <!--&lt;!&ndash; Features related to Cloud Identity &ndash;&gt;-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.identity.framework:org.wso2.carbon.user.mgt.feature:${carbon.identity.framework.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.commons:org.wso2.carbon.tenant.mgt.common.feature:${carbon.commons.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.multitenancy:org.wso2.carbon.tenant.common.feature:${carbon.multitenancy.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.is:org.wso2.identity.ui.feature:${project.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon:org.wso2.carbon.core.feature:${carbon.kernel.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon:org.wso2.carbon.core.runtime.feature:${carbon.kernel.version}-->
-                                <!--</featureArtifactDef>-->
+                                <!-- Features related to Cloud Identity -->
+                                <featureArtifactDef>
+                                    org.wso2.carbon.identity.framework:org.wso2.carbon.user.mgt.feature:${carbon.identity.framework.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.commons:org.wso2.carbon.tenant.mgt.common.feature:${carbon.commons.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.multitenancy:org.wso2.carbon.tenant.common.feature:${carbon.multitenancy.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.is:org.wso2.identity.ui.feature:${project.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon:org.wso2.carbon.core.feature:${carbon.kernel.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon:org.wso2.carbon.core.runtime.feature:${carbon.kernel.version}
+                                </featureArtifactDef>
 
-                                <!--&lt;!&ndash; DepSync feature &ndash;&gt;-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.commons:org.wso2.carbon.event.server.feature:${carbon.commons.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.commons:org.wso2.carbon.deployment.synchronizer.feature:${carbon.commons.version}-->
-                                <!--</featureArtifactDef>-->
+                                <!-- DepSync feature -->
+                                <featureArtifactDef>
+                                    org.wso2.carbon.commons:org.wso2.carbon.event.server.feature:${carbon.commons.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.commons:org.wso2.carbon.deployment.synchronizer.feature:${carbon.commons.version}
+                                </featureArtifactDef>
 
-                                <!--&lt;!&ndash; Store feature for SSO&ndash;&gt;-->
-                                <!--<featureArtifactDef>org.jaggeryjs.modules:sso.feature:${jaggery.extensions.version}-->
-                                <!--</featureArtifactDef>-->
+                                <!-- Store feature for SSO-->
+                                <featureArtifactDef>org.jaggeryjs.modules:sso.feature:${jaggery.extensions.version}
+                                </featureArtifactDef>
 
-                                <!--&lt;!&ndash; Identity Provisioning Feature &ndash;&gt;-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.identity.framework:org.wso2.carbon.identity.provisioning.server.feature:${carbon.identity.framework.version}-->
-                                <!--</featureArtifactDef>-->
+                                <!-- Identity Provisioning Feature -->
+                                <featureArtifactDef>
+                                    org.wso2.carbon.identity.framework:org.wso2.carbon.identity.provisioning.server.feature:${carbon.identity.framework.version}
+                                </featureArtifactDef>
 
-                                <!--&lt;!&ndash; SAML Request/Response Validator Toolkit Feature &ndash;&gt;-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.identity.tool.validator.sso.saml2:org.wso2.carbon.identity.tools.saml.validator.feature:${identity.tool.samlsso.validator.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.identity.metadata.saml2:org.wso2.carbon.identity.idp.metadata.saml2.server.feature:${identity.metadata.saml.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.identity.metadata.saml2:org.wso2.carbon.identity.sp.metadata.saml2.server.feature:${identity.metadata.saml.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.identity.framework:org.wso2.carbon.identity.notification.mgt.feature:${carbon.identity.framework.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.apache.axis2.transport:org.apache.axis2.transport.mail.feature:${axis2-transports.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--&lt;!&ndash; User Account Association Feature &ndash;&gt;-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.identity.association.account:org.wso2.carbon.identity.user.account.association.feature:${identity.user.account.association.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--&lt;!&ndash; Cipher tool feature &ndash;&gt;-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.ciphertool:org.wso2.ciphertool.feature:${cipher-tool.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<feaureArtifactDef>-->
-                                    <!--org.wso2.carbon.dashboards:org.wso2.carbon.dashboards.shindig.feature:${carbon.dashboards.version}-->
-                                <!--</feaureArtifactDef>-->
+                                <!-- SAML Request/Response Validator Toolkit Feature -->
+                                <featureArtifactDef>
+                                    org.wso2.carbon.identity.tool.validator.sso.saml2:org.wso2.carbon.identity.tools.saml.validator.feature:${identity.tool.samlsso.validator.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.identity.metadata.saml2:org.wso2.carbon.identity.idp.metadata.saml2.server.feature:${identity.metadata.saml.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.identity.metadata.saml2:org.wso2.carbon.identity.sp.metadata.saml2.server.feature:${identity.metadata.saml.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.identity.framework:org.wso2.carbon.identity.notification.mgt.feature:${carbon.identity.framework.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.apache.axis2.transport:org.apache.axis2.transport.mail.feature:${axis2-transports.version}
+                                </featureArtifactDef>
+                                <!-- User Account Association Feature -->
+                                <featureArtifactDef>
+                                    org.wso2.carbon.identity.association.account:org.wso2.carbon.identity.user.account.association.feature:${identity.user.account.association.version}
+                                </featureArtifactDef>
+                                <!-- Cipher tool feature -->
+                                <featureArtifactDef>
+                                    org.wso2.ciphertool:org.wso2.ciphertool.feature:${cipher-tool.version}
+                                </featureArtifactDef>
+                                <feaureArtifactDef>
+                                    org.wso2.carbon.dashboards:org.wso2.carbon.dashboards.shindig.feature:${carbon.dashboards.version}
+                                </feaureArtifactDef>
 
-                                <!-- Workflow mgt Feature -->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.identity.framework:org.wso2.carbon.identity.workflow.mgt.feature:${carbon.identity.framework.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.identity.workflow.user:org.wso2.carbon.user.mgt.workflow.feature:${identity.user.workflow.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.identity.workflow.impl.bps:org.wso2.carbon.identity.workflow.impl.feature:${identity.workflow.impl.bps.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.identity.workflow.template.multisteps:org.wso2.carbon.identity.workflow.template.server.feature:${identity.workflow.template.multisteps.version}-->
-                                <!--</featureArtifactDef>-->
+                                 Workflow mgt Feature
+                                <featureArtifactDef>
+                                    org.wso2.carbon.identity.framework:org.wso2.carbon.identity.workflow.mgt.feature:${carbon.identity.framework.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.identity.workflow.user:org.wso2.carbon.user.mgt.workflow.feature:${identity.user.workflow.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.identity.workflow.impl.bps:org.wso2.carbon.identity.workflow.impl.feature:${identity.workflow.impl.bps.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.identity.workflow.template.multisteps:org.wso2.carbon.identity.workflow.template.server.feature:${identity.workflow.template.multisteps.version}
+                                </featureArtifactDef>
 
-                                <!--&lt;!&ndash;BPEL and HumanTask features &ndash;&gt;-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.business-process:org.wso2.carbon.bpel.server.feature:${carbon.business-process.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.business-process:org.wso2.carbon.humantask.server.feature:${carbon.business-process.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.business-process:org.wso2.carbon.attachment.mgt.feature:${carbon.business-process.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.deployment:org.wso2.carbon.service.mgt.feature:${carbon.deployment.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.business-process:org.wso2.carbon.unifiedendpoint.server.feature:${carbon.business-process.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.analytics-common:org.wso2.carbon.event.output.adapter.server.feature:${carbon.analytics-common.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.analytics-common:org.wso2.carbon.databridge.commons.server.feature:${carbon.analytics-common.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.analytics-common:org.wso2.carbon.event.stream.server.feature:${carbon.analytics-common.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.deployment:org.wso2.carbon.module.mgt.feature:${carbon.deployment.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.metrics:org.wso2.carbon.metrics.feature:${carbon.metrics.version}-->
-                                <!--</featureArtifactDef>-->
+                                <!--BPEL and HumanTask features -->
+                                <featureArtifactDef>
+                                    org.wso2.carbon.business-process:org.wso2.carbon.bpel.server.feature:${carbon.business-process.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.business-process:org.wso2.carbon.humantask.server.feature:${carbon.business-process.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.business-process:org.wso2.carbon.attachment.mgt.feature:${carbon.business-process.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.deployment:org.wso2.carbon.service.mgt.feature:${carbon.deployment.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.business-process:org.wso2.carbon.unifiedendpoint.server.feature:${carbon.business-process.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.analytics-common:org.wso2.carbon.event.output.adapter.server.feature:${carbon.analytics-common.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.analytics-common:org.wso2.carbon.databridge.commons.server.feature:${carbon.analytics-common.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.analytics-common:org.wso2.carbon.event.stream.server.feature:${carbon.analytics-common.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.deployment:org.wso2.carbon.module.mgt.feature:${carbon.deployment.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.metrics:org.wso2.carbon.metrics.feature:${carbon.metrics.version}
+                                </featureArtifactDef>
 
                                 <!--Auth/Authz for Rest API-->
                                 <featureArtifactDef>
@@ -434,15 +434,15 @@
                                     org.wso2.carbon.utils:org.wso2.carbon.database.utils.feature:${carbon.database.utils.version}
                                 </featureArtifactDef>
 
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.identity.oauth.uma:org.wso2.carbon.identity.oauth.uma.server.feature:${carbon.identity.oauth.uma.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.extension.identity.x509certificate:org.wso2.carbon.extension.identity.x509Certificate.validation.server.feature:${org.wso2.carbon.extension.identity.x509certificate.version}-->
-                                <!--</featureArtifactDef>-->
-                                <!--<featureArtifactDef>-->
-                                    <!--org.wso2.carbon.identity.conditional.auth.functions:org.wso2.carbon.identity.conditional.auth.functions.server.feature:${conditional.authentication.functions.version}-->
-                                <!--</featureArtifactDef>-->
+                                <featureArtifactDef>
+                                    org.wso2.carbon.identity.oauth.uma:org.wso2.carbon.identity.oauth.uma.server.feature:${carbon.identity.oauth.uma.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.extension.identity.x509certificate:org.wso2.carbon.extension.identity.x509Certificate.validation.server.feature:${org.wso2.carbon.extension.identity.x509certificate.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.identity.conditional.auth.functions:org.wso2.carbon.identity.conditional.auth.functions.server.feature:${conditional.authentication.functions.version}
+                                </featureArtifactDef>
                             </featureArtifacts>
                         </configuration>
                     </execution>
