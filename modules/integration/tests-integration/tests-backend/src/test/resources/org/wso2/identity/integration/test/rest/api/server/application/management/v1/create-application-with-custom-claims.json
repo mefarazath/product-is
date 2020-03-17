@@ -1,0 +1,30 @@
+{
+  "name": "test app with custom claims",
+  "claimConfiguration": {
+    "dialect": "CUSTOM",
+    "claimMappings": [
+      {
+        "applicationClaim": "username",
+        "localClaim": {
+          "uri": "http://wso2.org/claims/username"
+        }
+      }
+    ],
+    "requestedClaims": [
+      {
+        "claim": {
+          "uri": "username"
+        },
+        "mandatory": false
+      }
+    ],
+    "subject": {
+      "claim": {
+        "uri": "username"
+      },
+      "includeUserDomain": false,
+      "includeTenantDomain": false,
+      "useMappedLocalSubject": false
+    }
+  }
+}
