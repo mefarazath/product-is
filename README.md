@@ -35,7 +35,7 @@ System Requirements
 
 2. Processor - 2 Core/vCPU 1.1GHz or higher
 
-3. Java SE Development Kit 1.8
+3. Java SE Development Kit 1.8 or higher
 
 4. The Management Console requires full Javascript enablement of the Web browser.
 
